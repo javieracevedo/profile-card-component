@@ -126,57 +126,68 @@
       color: #6A6F81
     }
 
-    .bg-pattern {
+    .top-bg {
       position: absolute;
-      z-index: -1000;
+      top: -143px;
+       left: -190px;
+      background: url('./images/bg-pattern-top.svg');
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0% 4%;
+      z-index: -1;
     }
 
-    .top-bg-pattern {
+    .bottom-bg {
+      position: absolute;
+      border-top: 0;
+      right: 0;
+      background: url('../images/bg-pattern-bottom.svg');
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 200%;
+      background-position: 180px 371px;
+      z-index: -1;
+    }
+
+
+
+    @media (min-width: 768px) {
+
+    }
+
+    @media (min-width: 1440px) {
+      .top-bg {
+        top: 0;
+        left: 0;
+        background-size: 75%;
+        background-position: -102% 150%;
+      }
+
+      .bottom-bg {
+        position: absolute;
+        border-top: 0;
+        right: 0;
+        background: url('../images/bg-pattern-bottom.svg');
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        background-position: 664px 371px;
+        z-index: -1;
+      }
+    }
+
+    /* .top-bg-pattern {
       top: -572px;
       right: 136px;
-    }
+    } */
 
-    @media (min-width: 536px) { 
-      .top-bg-pattern {
-        right: 210px;
-      }
-    }
 
-    @media (min-width: 652px) {
-      .top-bg-pattern {
-        right: 270px;
-      }
-    }
 
-    @media (min-width: 830px) {
-      .top-bg-pattern {
-        right: 498px;
-      }
-    }
 
-    @media (min-width: 976px) {
-      .top-bg-pattern {
-        right: 610px;
-      }
-    }
-
-    @media (min-width: 1160px) {
-      .top-bg-pattern {
-        right: 756px
-      }
-    }
-
-    @media (min-width: 1444px) {
-      .top-bg-pattern {
-         right: 841px;
-         top: -404px;
-      }
-
-      .bottom-bg-pattern {
-        top: 522px;
-        left: 653px;
-      }
-    }
 
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -185,6 +196,9 @@
 <body>
   <!-- <img class="bg-pattern top-bg-pattern" src="./images/bg-pattern-top.svg" alt="top background pattern"> -->
   <!-- <img class="bg-pattern bottom-bg-pattern" src="./images/bg-pattern-bottom.svg" alt="bottom background pattern"> -->
+
+  <div class="top-bg"></div>
+  <div class="bottom-bg"></div>
 
   <article class="profile-card">
     <img class="profile-picture" src="./images/image-victor.jpg" alt="profile picture">
